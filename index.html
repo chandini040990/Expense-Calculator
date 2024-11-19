@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Income Expenses Calculator</title>
+    <link rel="icon" href="./images/expense icon_png.png">
+    <meta name="'viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <section id="expense-form">
+            <form action="#" id="form">
+                <h1>Income Expense Calculator<img class="img" src="./images/expense icon_png.png"></h1>
+
+                <div class="total-container">
+                    <div class="totalincome">
+                        <label for="totalincome">Total Income: <i class="fa-regular fa-dollar-sign"></i></label>
+                        <input type="number" id="totalincome" value=0.00>
+                    </div>
+                    <div class="totalexpense">
+                        <label for="totalexpense">Total Expense: <i class="fa-regular fa-dollar-sign"></i></label>
+                        <input type="number" id="totalexpense" value=0.00>
+                    </div>
+                    <div class="netbalance">
+                        <label for="netbalance">Net Balance: <i class="fa-regular fa-dollar-sign"></i></label>
+                        <input type="number" id="netbalance" value=0.00>
+                    </div>
+                </div>
+
+
+                <div class="inputs">
+                    <input type="hidden" id="task-id">
+
+                    <label for="taskname">Task Description:</label>
+                    <input type="text" id="taskname" placeholder="task description" required>
+
+                    <label for="amount">Amount: <i class="fa-regular fa-dollar-sign"></i></label>
+                    <input type="number" id="amount" placeholder="enter the amount" value=0.00>
+
+                    <select name="category" id="category" required>
+                        <option value="" disabled selected>Income Type:</option>
+                        <option value="Income">Income</option>
+                        <option value="Expense">Expense</option>
+                    </select>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" required>
+
+                    <button id="addbtn" type="submit">Add</button>
+                    <button class="reset" id="resetbtn" type="button" onclick="resetButton()">Reset</button>
+
+                </div>
+            </form>
+
+            <section id="expense-table" class="expense-table">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task Description</th>
+                            <th>Amount</th>
+                            <th>Income Type</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expense-tbody"></tbody>
+                </table>
+            </section>
+
+            <section>
+                <div class="filter" id="filter-category">Filter by Category:</div>
+
+                <input type="radio" name="filter" id="fil-All" value="All" checked>
+                <label for="fil-All" class="selectfilter">All</label>
+
+                <input type="radio" name="filter" id="fil-Income" value="Income">
+                <label for="fil-Income" class="selectfilter">Income</label>
+
+                <input type="radio" name="filter" id="fil-Expense" value="Expense">
+                <label for="fil-Expense" class="selectfilter">Expense</label>
+
+                <button id="btn">Filter</button>
+
+    </div>
+
+    </section>
+    </div>
+
+    <div>
+        <script src="./main.js"></script>
+    </div>
+</body>
+
+</html>

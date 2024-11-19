@@ -1,0 +1,24 @@
+The Income Expense Calculator App is used to track daily expenses.
+
+It can get values from the user and store it in the local storage to access the data anytime.
+Show the total income, total expenses, and net balance at the top.
+
+Techstacks needs to be used : HTML CSS JAVASCRIPT
+
+Read Entry:
+Displays all expenses stored in the local storage on page load.
+
+Add Button:
+User enters the values and presses enter to submit the input. Adds value to local storage.
+
+Reset Button:
+If the user wants to clear the input fields simpliy by pressing the reset button.
+
+Edit and Delete Button:
+It displays a table with Income and expenses allowing user to edit or delete the data. Edits/Deletes the entry in local storage as well.
+
+Filter by category:
+Allows user to filter the data according to category type All,Income and Expense.
+All - Disaplays all values
+Income - Displays only incomes
+Expense - Displays only expenses
